@@ -238,6 +238,7 @@ BOARD_USE_SINGLE_PLANE_IN_DRM := true
 BOARD_VENDOR := samsung
 BOARD_MODEM_TYPE := tss310
 BOARD_PROVIDES_LIBRIL := false
+ENABLE_VENDOR_RIL_SERVICE := true
 
 # SCALER
 BOARD_USES_DEFAULT_CSC_HW_SCALER := true
@@ -248,8 +249,8 @@ TARGET_OMX_LEGACY_RESCALING := true
 TARGET_LD_SHIM_LIBS += \
     /vendor/lib/libexynoscamera.so|libexynoscamera_shim.so
 
-# Security patch level (bodged for now)
-VENDOR_SECURITY_PATCH := 2019-11-05
+# Security patch level
+VENDOR_SECURITY_PATCH := 2019-10-05
 
 # Seccomp
 BOARD_SECCOMP_POLICY := $(DEVICE_PATH)/seccomp
