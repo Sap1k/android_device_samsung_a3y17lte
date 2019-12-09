@@ -341,6 +341,3 @@ PRODUCT_PACKAGES += \
     libwifi-hal \
     wpa_supplicant \
     wpa_supplicant.conf
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi_service/android.hardware.wifi@1.0-service.exynos7870.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi@1.0-service.exynos7870.rc
