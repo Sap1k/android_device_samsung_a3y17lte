@@ -145,7 +145,7 @@ BOARD_USES_SKIA_FIMGAPI := true
 BOARD_USES_FIMGAPI_V5X := true
 
 # Fingerprint
-# TARGET_SEC_FP_HAL_VARIANT := bauth
+TARGET_SEC_FP_HAL_VARIANT := bauth
 
 # Graphics
 USE_OPENGL_RENDERER := true

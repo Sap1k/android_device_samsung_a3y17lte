@@ -185,11 +185,11 @@ PRODUCT_PACKAGES += \
     libebtc
 
 # Fingerprint
-# PRODUCT_PACKAGES += \
-#    android.hardware.biometrics.fingerprint@2.1-impl \
-#    android.hardware.biometrics.fingerprint@2.1-service \
-#    fingerprint.exynos5 \
-#    libbauthtzcommon_shim
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-impl \
+    android.hardware.biometrics.fingerprint@2.1-service \
+    fingerprint.exynos5 \
+    libbauthtzcommon_shim
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
