@@ -21,8 +21,8 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
-# Vendor properties
--include $(LOCAL_PATH)/vendor_prop.mk
+# System properties
+-include $(LOCAL_PATH)/system_prop.mk
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
