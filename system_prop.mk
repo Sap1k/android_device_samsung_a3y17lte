@@ -74,7 +74,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #Treble
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.media.treble_omx=true
+    persist.media.treble_omx=false
 
 # sdcardfs
 PRODUCT_PROPERTY_OVERRIDES += \
