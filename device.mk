@@ -184,17 +184,6 @@ PRODUCT_PACKAGES += \
     ethertypes \
     libebtc
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-impl \
-    android.hardware.biometrics.fingerprint@2.1-service \
-    fingerprint.exynos5 \
-    libbauthtzcommon_shim
-
-# Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl
-
 # Healthd
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
@@ -331,6 +320,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service
+
+# Fingerprint Package
+PRODUCT_PACKAGES += \
+    mcDriverDaemon \
+    fingerprint.exynos5 \
+    libbauthtzcommon_shim \
+    android.hardware.biometrics.fingerprint@2.1-impl \
+    android.hardware.biometrics.fingerprint@2.1-service
 
 # Wifi
 PRODUCT_PACKAGES += \
