@@ -768,3 +768,19 @@ service icd /system/bin/icd
 on property:init.svc.media=restarting
 #    check_icd
     start icd
+
+# fingerprint permissions
+    chown system radio /sys/class/fingerprint/fingerprint/type_check
+    chown system radio /sys/class/fingerprint/fingerprint/name
+    chown system radio /sys/class/fingerprint/fingerprint/vendor
+    chown system radio /sys/class/fingerprint/fingerprint/adm
+    chown system system /dev/esfp0
+    chmod 0660 /dev/esfp0
+
+# mobicore permissions
+    chown radio system /dev/mobicore-user
+    chown system system /dev/mobicore
+    chown system system /dev/s5p-smem
+    chmod 0666 /dev/mobicore-user
+    chmod 0700 /dev/mobicore
+    chmod 0660 /dev/s5p-smem
