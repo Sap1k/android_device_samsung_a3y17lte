@@ -333,13 +333,14 @@
         <fqname>@1.0::IAntHci/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>samsung.hardware.biometrics.fingerprint</name>
+        <name>vendor.samsung.hardware.biometrics.fingerprint</name>
         <transport>hwbinder</transport>
         <version>2.1</version>
         <interface>
-            <name>IBiometricsFingerprint</name>
+            <name>ISecBiometricsFingerprint</name>
             <instance>default</instance>
         </interface>
+        <fqname>@2.1::ISecBiometricsFingerprint/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.gnss</name>
