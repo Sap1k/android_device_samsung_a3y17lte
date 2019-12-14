@@ -245,9 +245,10 @@ BOARD_USES_DEFAULT_CSC_HW_SCALER := true
 BOARD_USES_SCALER_M2M1SHOT := true
 TARGET_OMX_LEGACY_RESCALING := true
 
-# Shims: camera
+# Shims
 TARGET_LD_SHIM_LIBS += \
-    system/vendor/lib/libexynoscamera.so|libexynoscamera_shim.so
+    /system/vendor/lib/libexynoscamera.so|libexynoscamera_shim.so
+    /system/lib/libbauthserver.so|/system/vendor/lib/libbauthtzcommon_shim.so
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2019-10-05
