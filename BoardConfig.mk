@@ -247,7 +247,7 @@ TARGET_OMX_LEGACY_RESCALING := true
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
-    /system/vendor/lib/libexynoscamera.so|libexynoscamera_shim.so
+    /system/vendor/lib/libexynoscamera.so|libexynoscamera_shim.so \
     /system/lib/libbauthserver.so|/system/vendor/lib/libbauthtzcommon_shim.so
 
 # Security patch level
