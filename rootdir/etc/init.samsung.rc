@@ -203,6 +203,7 @@ on post-fs-data
     # mobicore
     export MC_AUTH_TOKEN_PATH /efs
     mkdir /efs/TEE  0770 radio system
+    mkdir /data/system_ce 0770 system system
     chmod 0660 /dev/s5p-smem
     chmod 0660 /dev/t-base-tui
     chown media system /dev/s5p-smem

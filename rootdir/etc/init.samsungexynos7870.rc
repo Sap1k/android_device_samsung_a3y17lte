@@ -425,9 +425,10 @@ service start_hci_filter system/vendor/bin/wcnss_filter
 
 # MobiCore startup
 service mobicore /system/bin/mcDriverDaemon -r /system/app/020a0000000000000000000000000000.drbin -r /system/app/mcRegistry/FFFFFFFFD00000000000000000000016.tlbin
-    user drmrpc
-    group drmrpc
+    user system
+    group system
     class core
+    disabled
 
 # RPMB daemon
 service rpmbd /system/bin/rpmbd

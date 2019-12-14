@@ -323,7 +323,6 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint Package
 PRODUCT_PACKAGES += \
-    mcDriverDaemon \
     fingerprint.exynos5 \
     libbauthtzcommon_shim \
     android.hardware.biometrics.fingerprint@2.1-impl \
