@@ -326,7 +326,7 @@ PRODUCT_PACKAGES += \
 #    fingerprint.exynos5 \
 #    libbauthtzcommon_shim \
     android.hardware.biometrics.fingerprint@2.1-impl
-#    android.hardware.biometrics.fingerprint@2.1-service
+    android.hardware.biometrics.fingerprint@2.1-service
 
 # Wifi
 PRODUCT_PACKAGES += \
