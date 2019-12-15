@@ -27,8 +27,8 @@ on post-fs-data
     # for WIFI hotspot
     chown wifi root /data/vendor/conn/.softap.info
     chmod 0664 /data/vendor/conn/.softap.info
-    chown system wifi /vendor/etc/wifi/indoorchannel.info
-    chmod 0664 /vendor/etc/wifi/indoorchannel.info
+    chown system wifi /system/vendor/etc/wifi/indoorchannel.info
+    chmod 0664 /system/vendor/etc/wifi/indoorchannel.info
 
     # for WIFI MAC
     chown wifi root /sys/wifi/mac_addr
@@ -38,7 +38,7 @@ on boot
     setprop wifi.interface wlan0
 
 service wpa_supplicant /system/vendor/bin/hw/wpa_supplicant \
-    -O/data/vendor/wifi/wpa/sockets \
+    -O/data/vendor/wifi/wpa/sockets -puse_p2p_group_interface=0 \
     -g@android:wpa_wlan0
     interface android.hardware.wifi.supplicant@1.0::ISupplicant default
     interface android.hardware.wifi.supplicant@1.1::ISupplicant default
