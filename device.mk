@@ -322,10 +322,10 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-service
 
 # Fingerprint Package
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
 #    fingerprint.exynos5 \
 #    libbauthtzcommon_shim \
-#    android.hardware.biometrics.fingerprint@2.1-impl \
+    android.hardware.biometrics.fingerprint@2.1-impl
 #    android.hardware.biometrics.fingerprint@2.1-service
 
 # Wifi
