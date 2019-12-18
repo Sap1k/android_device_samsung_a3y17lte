@@ -24,6 +24,10 @@ $(call inherit-product, device/samsung/a3y17lte/device.mk)
 # Inherit some common AOSP stuff
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
+TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_STOCK_ARCORE := true
+
+# Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_a3y17lte
 PRODUCT_DEVICE := a3y17lte
 PRODUCT_BRAND := samsung
