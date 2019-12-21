@@ -22,12 +22,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, device/samsung/a3y17lte/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common AOSP stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common LineageOS stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := a3y17lte
-PRODUCT_NAME := aosp_a3y17lte
+PRODUCT_NAME := lineage_a3y17lte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A320FL
 PRODUCT_MANUFACTURER := samsung
