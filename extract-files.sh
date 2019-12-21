@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2017-2019 The LineageOS Project
+# Copyright (C) 2018-2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,13 +20,11 @@ set -e
 VENDOR=samsung
 DEVICE=a3y17lte
 
-export INITIAL_COPYRIGHT_YEAR=2017
-
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-LINEAGE_ROOT="${MY_DIR}/../../.."
+AOSP_ROOT="${MY_DIR}"/../../..
 
 HELPER="${LINEAGE_ROOT}/vendor/lineage/build/tools/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
@@ -35,14 +33,36 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
+SECTION=
+KANG=
+
+while [ "${#}" -gt 0 ]; do
+    case "${1}" in
+        -n | --no-cleanup )
+                CLEAN_VENDOR=false
+                ;;
+        -k | --kang )
+                KANG="--kang"
+                ;;
+        -s | --section )
+                SECTION="${2}"; shift
+                CLEAN_VENDOR=false
+                ;;
+        * )
+                SRC="${1}"
+                ;;
+    esac
+    shift
+done
+
+if [ -z "${SRC}" ]; then
+    SRC="adb"
+fi
+
 # Initialize the helper
-setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}"
+setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" true "${CLEAN_VENDOR}"
 
-# Copyright headers and guards
-write_headers "a3y17lte"
+extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
+        "${KANG}" --section "${SECTION}"
 
-# The standard blobs
-write_makefiles "${MY_DIR}/proprietary-files.txt" true
-
-# Finish
-write_footers
+"${MY_DIR}/setup-makefiles.sh"

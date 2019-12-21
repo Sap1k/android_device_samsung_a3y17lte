@@ -14,35 +14,12 @@
 # limitations under the License.
 #
 
-# This contains the module build definitions for the hardware-specific
-# components for this device.
-#
-# As much as possible, those components should be built unconditionally,
-# with device-specific names to avoid collisions, to avoid device-specific
-# bitrot and build breakages. Building a component unconditionally does
-# *not* include it on all devices, so it is safe even with hardware-specific
-# components.
-
 LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),a3y17lte)
+
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
-
-# Create links for OpenCL files
-$(shell mkdir -p  $(TARGET_OUT_VENDOR)/lib; \
-	mkdir -p  $(TARGET_OUT_VENDOR)/lib/hw; \
-    ln -sf /vendor/lib/egl/libGLES_mali.so $(TARGET_OUT_VENDOR)/lib/libOpenCL.so.1.1; \
-    ln -sf /vendor/lib/egl/libGLES_mali.so $(TARGET_OUT_VENDOR)/lib/libOpenCL.so.1; \
-    ln -sf /vendor/lib/egl/libGLES_mali.so $(TARGET_OUT_VENDOR)/lib/libOpenCL.so; \
-    ln -sf /vendor/lib/egl/libGLES_mali.so $(TARGET_OUT_VENDOR)/lib/hw/vulkan.exynos5.so)
-
-$(shell mkdir -p  $(TARGET_OUT_VENDOR)/lib64; \
-	mkdir -p  $(TARGET_OUT_VENDOR)/lib64/hw; \
-    ln -sf /vendor/lib64/egl/libGLES_mali.so $(TARGET_OUT_VENDOR)/lib64/libOpenCL.so.1.1; \
-    ln -sf /vendor/lib64/egl/libGLES_mali.so $(TARGET_OUT_VENDOR)/lib64/libOpenCL.so.1; \
-    ln -sf /vendor/lib64/egl/libGLES_mali.so $(TARGET_OUT_VENDOR)/lib64/libOpenCL.so; \
-    ln -sf /vendor/lib64/egl/libGLES_mali.so $(TARGET_OUT_VENDOR)/lib64/hw/vulkan.exynos5.so)
 
 endif
