@@ -79,7 +79,7 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/init/etc/init.wifi_device.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.wifi_device.rc
 
 # Properties
--include $(DEVICE_PATH)/system_prop.mk
+-include $(DEVICE_PATH)/vendor_prop.mk
 
 # Inherit from common
 $(call inherit-product, device/samsung/universal7870-common/device-common.mk)

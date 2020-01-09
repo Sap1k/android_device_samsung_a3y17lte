@@ -37,7 +37,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
-    /system/vendor/lib/libbauthserver.so|/system/vendor/lib/libbauthtzcommon_shim.so
+    /vendor/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
